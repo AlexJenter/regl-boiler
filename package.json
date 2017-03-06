@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "budo": "^9.4.7",
+    "regl": "^1.3.0"
+  },
+  "scripts": {
+    "start": "./node_modules/budo/bin/cmd.js index.js --live --open"
+  }
+}
