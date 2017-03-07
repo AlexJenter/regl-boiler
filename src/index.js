@@ -7,22 +7,8 @@ const draw = regl({
 
   // Shaders in regl are just strings.  You can use glslify or whatever you want
   // to define them.  No need to manually create shader objects.
-  frag: `
-  precision mediump float;
-  uniform float w, h, t;
-
-  void main() {
-    vec2 p = gl_FragCoord.xy / vec2(w, h);
-    gl_FragColor = vec4(p.x, p.y, sin(t * 0.02)+1.0, 1.0);
-  }`,
-
-  vert: `
-  precision mediump float;
-  attribute vec2 position;
-
-  void main() {
-    gl_Position = vec4(position, 0.0, 1.0);
-  }`,
+  frag: require('raw-loader!glslify!./frag.glsl'),
+  vert: require('raw-loader!glslify!./vert.glsl'),
 
   // Here we define the vertex attributes for the above shader
   attributes: {

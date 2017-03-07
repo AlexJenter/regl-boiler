@@ -1,9 +1,19 @@
 {
-  "devDependencies": {
-    "budo": "^9.4.7",
+  "dependencies": {
     "regl": "^1.3.0"
   },
   "scripts": {
-    "start": "./node_modules/budo/bin/cmd.js index.js --live --open"
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "glslify-loader": "^1.0.2",
+    "json-loader": "^0.5.4",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
   }
 }
